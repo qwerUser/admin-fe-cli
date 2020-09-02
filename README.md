@@ -15,6 +15,7 @@ npm install
 ```
 ## 启动项目
 ```
+cp _config.js config.js
 修改package.json文件
 "scripts": {
 	"test": "webpack --progress --env.path=本地静态文件服务的地址 --watch",
