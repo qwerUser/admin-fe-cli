@@ -1,6 +1,6 @@
 {
   "name": "admin-fe-cli",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "test",
   "main": "index.js",
   "scripts": {
