@@ -6,7 +6,8 @@ function init(name,config){
 	function readDirList(){
 		const spinner = ora('正在初始化').start();
 		spinner.color = "yellow";
-		download('direct:https://github.com/qwerUser/admin-fe-template.git#master', name, { clone: true }, function (err) {
+		let gitUrl = config.isSSR.toLowerCase()==='y'?'direct:https://github.com/qwerUser/admin-fe-ssr-template.git#master':'direct:https://github.com/qwerUser/admin-fe-template.git#master';
+		download(gitUrl, name, { clone: true }, function (err) {
 			spinner.stop();
 			if(err){
 				console.log(chalk.red('创建失败，该项目名已存在'));

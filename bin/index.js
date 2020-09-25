@@ -14,7 +14,15 @@ commander.version('1.0.0','-v --version');
 // },3000)
 
 commander.command('init <name>').action(name => {
-	require('./init')(name,{})
+	inquirer.prompt([
+		{
+			type: 'input',
+			name: 'isSSR',
+			message: '是否使用SSR(Y/N)：'
+		}
+	]).then(answer=>{
+		require('./init')(name,answer)
+	})
 	// inquirer.prompt([
 	// 	{
 	// 		type: 'input',
