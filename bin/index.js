@@ -3,8 +3,9 @@ const commander = require('commander');
 const ora = require('ora');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
+const package = require('../package.json');
 
-commander.version('1.0.0','-v --version');
+commander.version(package.version,'-v --version');
 
 // const spinner = ora('helo world').start();
 // spinner.color = "yellow";
@@ -21,7 +22,7 @@ commander.command('init <name>').action(name => {
 			message: '是否使用SSR(Y/N)：'
 		}
 	]).then(answer=>{
-		require('./init')(name,answer)
+		srequire('./init')(name,answer)
 	})
 	// inquirer.prompt([
 	// 	{
