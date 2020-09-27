@@ -22,7 +22,7 @@ commander.command('init <name>').action(name => {
 			message: '是否使用SSR(Y/N)：'
 		}
 	]).then(answer=>{
-		srequire('./init')(name,answer)
+		require('./init')(name,answer)
 	})
 	// inquirer.prompt([
 	// 	{
